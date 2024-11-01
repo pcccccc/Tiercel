@@ -53,6 +53,12 @@ public class Cache {
         return (dstPath as NSString).appendingPathComponent(cacheName)
     }
     
+    public static func defaultDiskDocumentPathClosure(_ cacheName: String) -> String {
+        let dstPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        return (dstPath as NSString).appendingPathComponent(cacheName)
+    }
+
+    
 
     /// 初始化方法
     /// - Parameters:
